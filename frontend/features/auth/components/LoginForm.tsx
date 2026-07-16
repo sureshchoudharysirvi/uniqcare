@@ -1,19 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function LoginForm() {
   return (
-    <div className="w-full max-w-md space-y-6">
-      <div>
-        <h2 className="text-3xl font-bold">Welcome Back</h2>
-        <p className="text-muted-foreground mt-2">
-          Sign in to continue to UniqCare.
-        </p>
-      </div>
+  <Card className="w-full max-w-md shadow-xl border-0">
+    <CardHeader>
+      <CardTitle className="text-3xl font-bold">
+        Welcome Back
+      </CardTitle>
+
+      <CardDescription>
+        Sign in to continue to UniqCare.
+      </CardDescription>
+    </CardHeader>
+
+    <CardContent className="space-y-5">
 
       <div className="space-y-2">
-        <Label htmlFor="loginId">Login ID</Label>
+        <Label htmlFor="loginId">
+          Login ID
+        </Label>
+
         <Input
           id="loginId"
           placeholder="Mobile Number or Employee ID"
@@ -21,7 +36,10 @@ export default function LoginForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="password">Password</Label>
+        <Label htmlFor="password">
+          Password
+        </Label>
+
         <Input
           id="password"
           type="password"
@@ -32,6 +50,8 @@ export default function LoginForm() {
       <Button className="w-full">
         Sign In
       </Button>
-    </div>
-  );
+
+    </CardContent>
+  </Card>
+);
 }
